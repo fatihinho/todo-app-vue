@@ -1,8 +1,8 @@
 <template>
     <div class="input-group mb-3">
-        <input v-model="todoText" type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <input v-model="todoText" type="text" class="form-control" placeholder="Not Ekle" aria-label="Recipient's username" aria-describedby="button-addon2">
         <div class="input-group-append">
-            <button v-on:click="showText" class="btn btn-outline-secondary" type="button" id="button-addon2">Ekle</button>
+            <button v-on:click="sendMessage" class="btn btn-outline-secondary" type="button" id="button-addon2">Ekle</button>
         </div>
     </div>
 </template>
@@ -15,8 +15,16 @@ export default {
         }
     },
     methods: {
-        showText() {
-            alert(this.todoText)
+        sendMessage() {
+            if (this.todoText !== "")
+                this.$emit("inputEvent", this.outputMessage())
+            this.todoText = ""
+        },
+        outputMessage(todos=document.querySelector('.todos'), div=document.createElement('div'), msg=this.todoText) {
+            div.classList.add('alert', 'alert-dismissible', 'alert-success')
+            div.innerHTML = `<button type="button" class="close" data-dismiss="alert">&times;</button>
+            <p><strong>${msg}</strong></p>`
+            todos.appendChild(div)
         }
     }
 }
