@@ -1,8 +1,8 @@
 <template>
     <div id="container">
         <Navbar />
-        <FormInput />
-        <TodoText />
+        <FormInput @inputEvent="outputMessage=$event" />
+        <TodoText :outputMessage=outputMessage />
         <Footer />
     </div>
 </template>
@@ -20,11 +20,9 @@ export default {
         FormInput,
         TodoText
     },
-
-
     data() {
         return {
-            message: "Hello World"
+            outputMessage: Function
         }
     }
 }
