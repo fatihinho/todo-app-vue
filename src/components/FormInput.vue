@@ -25,6 +25,29 @@ export default {
             div.innerHTML = `<button type="button" class="close" data-dismiss="alert">&times;</button>
             <p><strong>${msg}</strong></p>`
             todos.appendChild(div)
+
+
+            let card = []
+            let button = []
+
+            const todoCards = document.querySelectorAll('.alert', '.alert-dismissible', '.alert-success')
+            const closeButtons = document.querySelectorAll('.close')
+            
+            todoCards.forEach(c => {
+                card.push(c)
+            })
+
+            closeButtons.forEach(btn => {
+                button.push(btn)
+            })
+            
+            for (let i=0; i<closeButtons.length; i++) {
+                button[i].addEventListener('click', () => {
+                    card[i].remove()
+                })
+            }
+
+            console.log(card)
         }
     }
 }
