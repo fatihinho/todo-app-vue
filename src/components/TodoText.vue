@@ -1,18 +1,23 @@
 <template>
     <div class="todos">
-
+        <div class="alert alert-dismissible alert-success">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <p><strong>Todo1</strong></p>
+        </div>
+        <div class="alert alert-dismissible alert-success">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <p><strong>Todo1</strong></p>
+        </div>
+        <div class="alert alert-dismissible alert-success">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <p><strong>Todo1</strong></p>
+        </div>
     </div>
 </template>
 
 <script>
 export default {
-    props: ['outputMessage'],
-    methods: {
-        
-    },
-    mounted() {
-        this.outputMessage()
-    }
+
 }
 </script>
 
@@ -23,8 +28,5 @@ export default {
     }
     .todos p {
         text-align: center;
-    }
-    .todos .alert {
-        height: 62px;
     }
 </style>
