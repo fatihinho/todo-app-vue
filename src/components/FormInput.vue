@@ -26,7 +26,6 @@ export default {
             <p><strong>${msg}</strong></p>`
             todos.appendChild(div)
 
-
             let card = []
             let button = []
 

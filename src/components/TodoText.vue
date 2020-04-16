@@ -1,6 +1,9 @@
 <template>
     <div class="todos">
-
+        <div class="alert alert-dismissible alert-success">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <p><strong>Todo</strong></p>
+        </div>
     </div>
 </template>
 
@@ -26,5 +29,12 @@ export default {
     }
     .todos .alert {
         height: 62px;
+        color: #2C3E50;
+        font-size: 24px;
+        font-weight: bold;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .todos .alert .close:hover {
+        color: darkred;
     }
 </style>
