@@ -46,8 +46,6 @@ export default {
                     card[i].remove()
                 })
             }
-
-            console.log(card)
         }
     }
 }
