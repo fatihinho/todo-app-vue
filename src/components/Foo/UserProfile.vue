@@ -8,7 +8,7 @@
                 <li>Email: {{userData.email}}</li>
                 <li>Phone: {{userData.phone}}</li>
             </ul>
-            <router-link :to="profilePosts">Post</router-link>
+            <router-link :to="profilePosts">Posts</router-link>
         </div>
     </div>
 </template>

@@ -6,6 +6,7 @@ import Home from './components/Home/Home.vue'
 import Foo from './components/Foo/Foo.vue'
 import Bar from './components/Bar/Bar.vue'
 import UserProfile from './components/Foo/UserProfile.vue'
+import UserPosts from './components/Foo/UserPosts.vue'
 
 Vue.config.productionTip = false
 
@@ -16,7 +17,8 @@ const router = new VueRouter({
         { path: '/', component: Home },
         { path: '/foo', component: Foo },
         { path: '/bar', component: Bar },
-        { path: '/user/:id', component: UserProfile }
+        { path: '/user/:id', component: UserProfile },
+        { path: '/user/:userId/posts', component: UserPosts }
     ],
     mode: 'history'
 })
