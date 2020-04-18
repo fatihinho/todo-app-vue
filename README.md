@@ -12,6 +12,7 @@ npm run serve
 
 ## Dependencies
 ```
-https://jsonplaceholder.typicode.com/
+We use fake data's using API at
+https://jsonplaceholder.typicode.com/ 
 ```
 
