@@ -8,6 +8,8 @@
                 <li>Email: {{userData.email}}</li>
                 <li>Phone: {{userData.phone}}</li>
             </ul>
+            <router-link :to="previousUser">Previous</router-link>
+            <router-link :to="nextUser">Next</router-link>
             <router-link :to="profilePosts">Posts</router-link>
         </div>
     </div>
@@ -27,6 +29,12 @@ export default {
         }
     },
     computed: {
+        previousUser() {
+            return `/user/${parseInt(this.$route.params.id) - 1}`
+        },
+        nextUser() {
+            return `/user/${parseInt(this.$route.params.id) + 1}`
+        },
         profilePosts() {
             return `/user/${this.$route.params.id}/posts`
         }
