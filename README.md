@@ -1,4 +1,4 @@
-# todo-app
+# todo-app with vue.js
 
 ## Project setup
 ```
@@ -10,15 +10,8 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
+## Dependencies
 ```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
+https://jsonplaceholder.typicode.com/
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

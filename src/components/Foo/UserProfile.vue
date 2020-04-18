@@ -1,14 +1,12 @@
 <template>
     <div>
         <Navbar />
-        <div>
+        <div class="user-datas">
             <a v-on:click="goBack" href="">Go back to user list</a>
             <h1>{{userData.name}}</h1>
-            <ul>
-                <li>Username: {{userData.username}}</li>
-                <li>Email: {{userData.email}}</li>
-                <li>Phone: {{userData.phone}}</li>
-            </ul>
+            <p>Username: {{userData.username}}</p>
+            <p>Email: {{userData.email}}</p>
+            <p>Phone: {{userData.phone}}</p>
             <router-link :to="previousUser">Previous</router-link>
             <router-link :to="nextUser">Next</router-link>
             <router-link :to="profilePosts">Posts</router-link>
@@ -59,6 +57,12 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+    .user-datas {
+        margin-top: 36px;
+        text-align: center;
+    }
+    a {
+        margin: 16px;
+    }
 </style>

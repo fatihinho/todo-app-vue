@@ -17,8 +17,8 @@ const router = new VueRouter({
         { path: '/', component: Home },
         { path: '/foo', component: Foo },
         { path: '/bar', component: Bar },
-        { path: '/user/:id', component: UserProfile },
-        { path: '/user/:userId/posts', component: UserPosts }
+        { path: '/user/:id', component: UserProfile, name: 'users' },
+        { path: '/user/:userId/posts', component: UserPosts, name: 'posts' }
     ],
     mode: 'history'
 })

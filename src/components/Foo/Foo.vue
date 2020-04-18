@@ -1,7 +1,7 @@
 <template>
     <div>
         <Navbar />
-        <div v-for="(user, index) in users" :key="index">
+        <div class="users" v-for="(user, index) in users" :key="index">
             <UserItem :user=user />
         </div>
     </div>
@@ -31,5 +31,8 @@ export default {
 </script>
 
 <style>
-
+    .users {
+        margin-top: 36px;
+        text-align: center;
+    }
 </style>

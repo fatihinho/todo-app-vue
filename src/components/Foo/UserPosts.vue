@@ -2,7 +2,7 @@
     <div>
         <Navbar />
         <router-link :to="backToUser">Back to User</router-link>
-        <div v-for="(post, index) in postData" :key="index">
+        <div class="posts" v-for="(post, index) in postData" :key="index">
             <h3>{{ post.title }}</h3>
             <p>{{ post.body }}</p>
             <hr>
@@ -35,6 +35,12 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+    .posts {
+        padding: 16px;
+        padding-top: 0px;
+    }
+    a {
+        padding: 16px;
+    }
 </style>

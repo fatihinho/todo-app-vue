@@ -1,7 +1,9 @@
 <template>
     <div>
         <router-link :to="profileLink">
-            <p>{{ user.name }} @{{ user.username }}</p>
+            <div class="users">
+                <p>{{ user.name }} @{{ user.username }}</p>
+            </div>
         </router-link>
     </div>
 </template>
@@ -18,6 +20,6 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+    
 </style>
