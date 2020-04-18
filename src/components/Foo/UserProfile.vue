@@ -2,6 +2,7 @@
     <div>
         <Navbar />
         <div>
+            <a v-on:click="goBack" href="">Go back to user list</a>
             <h1>{{userData.name}}</h1>
             <ul>
                 <li>Username: {{userData.username}}</li>
@@ -23,9 +24,17 @@ export default {
     components: {
         Navbar,
     },
-    data() {
-        return {
-            userData: {}
+    watch: {
+        '$route': 'fetchData'
+    },
+    methods: {
+        fetchData() {
+            fetch(`https://jsonplaceholder.typicode.com/users/${this.$route.params.id}`)
+                .then(response => response.json())
+                .then(data => this.userData = data)
+        },
+        goBack() {
+            this.$router.push('/foo')
         }
     },
     computed: {
@@ -39,10 +48,13 @@ export default {
             return `/user/${this.$route.params.id}/posts`
         }
     },
+    data() {
+        return {
+            userData: {}
+        }
+    },
     created() {
-        fetch(`https://jsonplaceholder.typicode.com/users/${this.$route.params.id}`)
-            .then(response => response.json())
-            .then(data => this.userData = data)
+        this.fetchData()
     }
 }
 </script>
