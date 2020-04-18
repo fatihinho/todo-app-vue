@@ -12,7 +12,7 @@ import Navbar from './Navbar'
 import UserItem from './UserItem'
 
 export default {
-    name: 'Foo',
+    name: 'User',
     components: {
         Navbar,
         UserItem

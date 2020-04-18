@@ -32,7 +32,7 @@ export default {
                 .then(data => this.userData = data)
         },
         goBack() {
-            this.$router.push('/foo')
+            this.$router.push('/user')
         }
     },
     computed: {
