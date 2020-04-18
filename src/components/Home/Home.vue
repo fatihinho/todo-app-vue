@@ -1,5 +1,5 @@
 <template>
-    <div id="home">
+    <div>
         <Navbar />
         <FormInput @inputEvent="outputMessage=$event" />
         <TodoText :outputMessage=outputMessage />

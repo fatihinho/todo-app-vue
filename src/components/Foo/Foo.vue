@@ -1,5 +1,5 @@
 <template>
-    <div id="foo">
+    <div>
         <Navbar />
         <div v-for="(user, index) in users" :key="index">
             <UserItem :user=user />
